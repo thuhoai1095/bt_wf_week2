@@ -1,0 +1,26 @@
+body{
+    border: 10px solid yellowgreen;
+    background-color: #00e5ff;
+    width: 30%;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: medium;
+}
+#name{
+    margin-left: 22px;
+}
+#mail{
+    margin-left: 50px;
+}
+#st{
+    color: white;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+}
+#hob{
+    color: #e78b25;
+}
+span {
+    color: blue;
+}
