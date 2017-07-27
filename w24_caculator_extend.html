@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh bo tui</title>
+    <style type="text/css">
+        .mt{
+            width: 3em;
+        }
+        #kq {
+            width: 23em; height: 2em; margin-bottom: 0.5em
+        }
+    </style>
+</head>
+<body>
+<div id="maytinh">
+    <input id="kq" type="text" placeholder="may tinh fx500 cua hoai"><br>
+    <input type="button" value="rad"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="deg"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="x&#33"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="&#40"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="&#41"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="&#37"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="AC"class="mt" onclick= "xoa()"><br>
+    <input type="button" value="lnv"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="sin"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="ln"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="7"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="8"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="9"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="/"class="mt" onclick="Set_num(this.value)"><br>
+    <input type="button" value="&pi;"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="cos"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="log"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="4"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="5"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="6"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="&#42"class="mt" onclick="Set_num(this.value)"><br>
+    <input type="button" value="e"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="tan"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="&gamma;"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="1"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="2"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="3"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="-"class="mt" onclick="Set_num(this.value)"><br>
+    <input type="button" value="Ans"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="EXP"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="x<sup>y</sup>"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="0"class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="."class="mt" onclick="Set_num(this.value)">
+    <input type="button" value="="class="mt" onclick="ketqua()">
+    <input type="button" value="+"class="mt" onclick="Set_num(this.value)"><br>
+
+</div>
+    <script>{
+        var x='';
+        function a(id) {
+           return document.getElementById(id);
+        }
+        function Set_num(num) {
+            x = x + num;
+            a('kq').value = x;
+        }
+
+      function xoa() {
+          x ='';
+          a('kq').value= x;
+          
+      }
+      function ketqua() {
+          a('kq').value=eval(a('kq').value);
+      }
+    } </script>
+
+</body>
+</html>

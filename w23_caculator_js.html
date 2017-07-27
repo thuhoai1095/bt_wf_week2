@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator</title>
+</head>
+<body>
+    <input  type="number" name="soa" id="firstnumber" style="margin-left: 1em;height: 2em; width: 12em">
+    <input id="secondnumber" type="number" name="sob" style="margin-left: 2em;height: 2em; width: 12em"><br><br>
+    <button type="button" value="add" onclick="add()">Addition(+)</button>
+    <button type="button" value="sub" onclick="sub()">Subtraction(-)</button>
+    <button type="button" value="mul" onclick="mul()">Multiplication(*)</button>
+    <button type="button" value="div" onclick="div()">Division(/)</button>
+    <p id="kq">Kết quả</p>
+    <script>
+        function returnNumberOne() {
+            return parseFloat(document.getElementById('firstnumber').value);
+        }
+
+        function returnNumberTwo() {
+            return parseFloat(document.getElementById('secondnumber').value);
+        }
+
+        function add() {
+            var tong=returnNumberOne() + returnNumberTwo();
+            document.getElementById('kq').innerHTML=tong;
+        }
+        function sub() {
+            var hieu = returnNumberOne() - returnNumberTwo();
+            document.getElementById('kq').innerHTML = hieu;
+        }
+        function mul() {
+            var tich=returnNumberOne() * returnNumberTwo();
+            document.getElementById('kq').innerHTML=tich;
+        }
+        function div() {
+            var thuong = returnNumberOne() / returnNumberTwo();
+            document.getElementById('kq').innerHTML = thuong;
+        }
+
+    </script>
+</body>
+</html>

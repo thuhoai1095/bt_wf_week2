@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <strong style="margin-left: 2em">Amount</strong>
+    <strong style="margin-left: 8em">From Currency</strong>
+    <strong style="margin-left: 10em">To Currenty</strong><br>
+    <input id="amount" type="text" style="margin-left: 1em; width: 10em"/>
+    <select id="fromCurrency" style="margin-left: 5em; width: 12em">
+        <option value="vnd">Việt Nam Đồng(VND)</option>
+        <option value="usd">Đô la Mỹ(USD)</option>
+        <option value="krw">Won Hàn Quốc(KRW)</option>
+        <option value="gbp">Bảng Anh(GBP)</option>
+        <option value="thb">Bạt Thái Lan(THB)</option>
+    </select>
+    <select id="toCurrenty" style="margin-left: 8em; width: 12em">
+        <option value="vnd">Việt Nam Đồng(VND)</option>
+        <option value="usd">Đô la Mỹ(USD)</option>
+        <option value="krw">Won Hàn Quốc(KRW)</option>
+        <option value="gbp">Bảng Anh(GBP)</option>
+        <option value="thb">Bạt Thái Lan(THB)</option>
+    </select>
+    <button type="button" onclick="money()">Check</button>
+    <p id="kq">Ket qua:</p>
+<script language="JavaScript">
+    function money() {
+        var amount=document.getElementById('amount').value;
+        var fromCurrency=document.getElementById('fromCurrency').value;
+        var toCurrenty =document.getElementById('toCurrenty').value;
+        switch (fromCurrency){
+            case "vnd": {
+                switch (toCurrenty) {
+                    case "vnd":
+                        document.getElementById("kq").innerHTML = amount;
+                        break;
+                    case "usd":
+
+                        document.getElementById("kq").innerHTML = amount / 22000;
+                        break;
+                    case "krw":
+                        document.getElementById("kq").innerHTML = amount / 20000;
+                        break;
+                    case "gbp":
+                        document.getElementById("kq").innerHTML = amount / 29000;
+                        break;
+                    case "thb":
+                        document.getElementById("kq").innerHTML = amount / 10000;
+                        break;
+                }
+                break;
+            }
+            case "usd":{
+                switch (toCurrenty){
+                    case "usd":
+                        document.getElementById("kq").innerHTML = amount;
+                        break;
+                    case "vnd":
+                        document.getElementById("kq").innerHTML = amount * 22000;
+                        break;
+                    case "krw":
+                        document.getElementById("kq").innerHTML = amount /1.2;
+                        break;
+                    case "gbp":
+                        document.getElementById("kq").innerHTML = amount / 0.9;
+                        break;
+                    case "thb":
+                        document.getElementById("kq").innerHTML = amount *2.2;
+                        break;
+                }
+
+            case "krw": {
+                switch (toCurrenty) {
+                    case "krw":
+                        document.getElementById("kq").innerHTML = amount;
+                        break;
+                    case "usd":
+                        document.getElementById("kq").innerHTML = amount *1.2;
+                        break;
+                    case "vnd":
+                        document.getElementById("kq").innerHTML = amount *20000;
+                        break;
+                    case "gbp":
+                        document.getElementById("kq").innerHTML = amount /1.3;
+                        break;
+                    case "thb":
+                        document.getElementById("kq").innerHTML = amount * 2;
+                        break;
+                }
+                break;
+            }
+            case "gbp": {
+                switch (toCurrenty) {
+                    case "gbp":
+                        document.getElementById("kq").innerHTML = amount;
+                        break;
+                    case "usd":
+                        document.getElementById("kq").innerHTML = amount *1.2;
+                        break;
+                    case "vnd":
+                        document.getElementById("kq").innerHTML = amount *29000;
+                        break;
+                    case "krw":
+                        document.getElementById("kq").innerHTML = amount *1.3;
+                        break;
+                    case "thb":
+                        document.getElementById("kq").innerHTML = amount * 2900;
+                        break;
+                }
+                break;
+            }
+            case "thb": {
+                switch (toCurrenty) {
+                    case "thb":
+                        document.getElementById("kq").innerHTML = amount;
+                        break;
+                    case "usd":
+                        document.getElementById("kq").innerHTML = amount /2.2;
+                        break;
+                    case "vnd":
+                        document.getElementById("kq").innerHTML = amount *2;
+                        break;
+                    case "krw":
+                        document.getElementById("kq").innerHTML = amount /1.3;
+                        break;
+                    case "gbp":
+                        document.getElementById("kq").innerHTML = amount / 2900;
+                        break;
+                }
+                break;
+            }
+            }
+
+    }
+</script>
+</form>
+</body>
+</html>
