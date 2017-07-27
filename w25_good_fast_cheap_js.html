@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>good fast cheap</title>
+    <link rel="stylesheet" type="text/css" href="w25_good_fast_cheap.css" />
+</head>
+<body>
+GOOD
+<input type="checkbox" id="good" name=" good" onclick="good()"><br>
+FAST
+<input type="checkbox" id="fast" name="fast" onclick="fast()"><br>
+CHEAP
+<input type="checkbox" id="cheap" name="cheap" onclick="cheap()">
+
+<script language="JavaScript">
+    function good() {
+        var good=document.getElementById('good');
+        var fast=document.getElementById('fast');
+        var cheap=document.getElementById('cheap');
+        if(good.checked==true){
+            if(fast.checked==true){
+                if(cheap.checked==true){
+                    document.getElementById('fast').checked=false;
+                }
+            }
+        }
+  }
+    function fast() {
+        var good=document.getElementById('good');
+        var fast=document.getElementById('fast');
+        var cheap=document.getElementById('cheap');
+        if(fast.checked==true){
+            if(cheap.checked==true){
+                if(good.checked==true){
+                    document.getElementById('cheap').checked=false;
+                }
+            }
+        }
+    }
+    function cheap() {
+        var good=document.getElementById('good');
+        var fast=document.getElementById('fast');
+        var cheap=document.getElementById('cheap');
+        if(cheap.checked==true){
+            if(good.checked==true){
+                if(fast.checked==true){
+                    document.getElementById('good').checked=false;
+                }
+            }
+        }
+        
+    }
+</script>
+</body>
+</html>

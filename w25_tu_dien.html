@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+    <form>
+        <textarea id="bd" rows="10" cols="35"></textarea>
+        <textarea id="kq" style="margin-left: 100px" rows="10" cols="35"></textarea>
+    </form>
+    <input  type="button" id="button" name="bt" value="translate" onclick="Dich()">
+</body>
+<script language="JavaScript">
+    function Dich() {
+        var m1 = ["mèo","chó","lợn","bút","thước"];
+        var m2 = ["cat","dog","pig","pen","rule"];
+        var bd=document.getElementById('bd').value;
+        var kt="";
+        var index=-1;
+        for (i = 0; i < m1.length; i++) {
+            if (bd == m1[i]) {
+                index = i;
+            }
+        }
+        var kq = m2[index];
+        if(index!=-1){
+            document.getElementById("kq").innerHTML = kq;
+        }
+        else{
+            alert("Không có trong từ điển")
+        }
+    }
+
+</script>
+</html>

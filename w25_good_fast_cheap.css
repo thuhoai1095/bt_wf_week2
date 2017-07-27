@@ -1,0 +1,12 @@
+body{
+    border: 5px solid gold;
+    border-width: 20px;
+    border-height: 60px;
+    padding: 30px;
+    line-height: 30px;
+}
+input{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 30px;
+}
